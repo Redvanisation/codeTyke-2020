@@ -63,6 +63,7 @@
         }
 
         @media only screen and (max-width: $mobile) {
+            clear: left;
             padding: 0 10px;
         }
     }
