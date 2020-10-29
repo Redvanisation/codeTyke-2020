@@ -1,0 +1,23 @@
+.progress-bar {
+    width: 100%;
+
+    &__background {
+        border-radius: 40px;
+        position: relative;
+        z-index: 1;
+        height: 2px;
+        background-color: #DEDEDE;
+        width: 100%;
+    }
+
+    &__body {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        // width: 20%;
+        z-index: 2;
+        height: 6px;
+        background-color: #9C51FF;
+        border-radius: 20px;
+    }
+}

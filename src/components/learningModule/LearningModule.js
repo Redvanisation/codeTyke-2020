@@ -3,6 +3,7 @@ import SelectionBox from '../selectionBox/SelectionBox';
 import Button from '../button/Button';
 
 import './Styles.scss';
+import ProgressBar from '../progressBar/ProgressBar';
 
 const LearningModule = ({setGameStatus}) => {
   const [currentQuestionId, setCurrentQuestionId] = React.useState(0);
@@ -38,12 +39,12 @@ const LearningModule = ({setGameStatus}) => {
     })
   }
 
-
   return (
     <div className="learningModule">
       { currentQuestion.title &&
         <>
           <div className="learningModule--header">
+            <ProgressBar questionId={currentQuestionId} questionsTotal={quizData.totalQuestions} />
             <div className="learningModule--title">
               { currentQuestion.title }
             </div>

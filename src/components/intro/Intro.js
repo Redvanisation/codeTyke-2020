@@ -8,7 +8,7 @@ const Intro = ({gameStatus, setGameStatus}) => {
     return (
         <div className="introContainer">
                 <div className="introContainer--logo">
-                    <img alt="logo" src="assets/logo.png" />            
+                    <img alt="logo" src="/assets/logo.png" />            
                 </div>
                 <div className="introContainer--message">
                     {gameStatus.message}
