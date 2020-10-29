@@ -1,0 +1,13 @@
+@import '../../styles/utils/colors';
+
+.submitButton{
+  text-align: center;
+  color: white;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  background-color: $grass-blade;
+  padding: 0 2em;
+  cursor: pointer;
+}
