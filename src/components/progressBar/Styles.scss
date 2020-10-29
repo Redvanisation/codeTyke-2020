@@ -15,9 +15,21 @@
         top: -2px;
         left: 0;
         // width: 20%;
-        z-index: 2;
+        z-index: 3;
         height: 6px;
         background-color: #9C51FF;
         border-radius: 20px;
+    }
+
+    &__dot {
+        position: absolute;
+        top: -3px;
+        right: 0;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #DEDEDE;
+        border-radius: 100%;
+        z-index: 2;
     }
 }
