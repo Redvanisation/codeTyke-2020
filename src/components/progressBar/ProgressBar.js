@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import './Styles.scss';
 
-const ProgressBar = ({ questionId, questionsTotal }) => {
-    const [barWidth, setBarWidth] = useState(25);
-
-    useEffect(() => {
-        const result = 100 / (questionsTotal - questionId);
-        
-        setBarWidth(result);
-    }, [questionsTotal, questionId])
+const ProgressBar = ({ barWidth }) => {
 
 
     return <div className="progress-bar">

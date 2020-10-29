@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SelectionBox from '../selectionBox/SelectionBox';
 import Button from '../button/Button';
 
@@ -8,6 +8,7 @@ import ProgressBar from '../progressBar/ProgressBar';
 const LearningModule = ({setGameStatus}) => {
   const [currentQuestionId, setCurrentQuestionId] = React.useState(0);
   const [quizData, setQuizData] = React.useState({});
+  const [barWidth, setBarWidth] = useState(25);
   let currentQuestion = quizData.questionArr ? quizData.questionArr[currentQuestionId]: {};
   React.useEffect(()=>{
     getQuizData();
@@ -26,6 +27,7 @@ const LearningModule = ({setGameStatus}) => {
 
   const handleSubmit=()=> {
     if(currentQuestionId < quizData.totalQuestions-1){
+      setBarWidth(prev => prev + 25);
       setCurrentQuestionId(currentQuestionId+1);
     } else {
       setCurrentQuestionId(0);
@@ -44,7 +46,7 @@ const LearningModule = ({setGameStatus}) => {
       { currentQuestion.title &&
         <>
           <div className="learningModule--header">
-            <ProgressBar questionId={currentQuestionId} questionsTotal={quizData.totalQuestions} />
+            <ProgressBar barWidth={barWidth} />
             <div className="learningModule--title">
               { currentQuestion.title }
             </div>
